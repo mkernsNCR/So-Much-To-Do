@@ -4,17 +4,31 @@
   "description": "To Do App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkernsNCR/So-Much-To-Do.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Matthew Kerns",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mkernsNCR/So-Much-To-Do/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "react-hot-loader": "^4.9.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "homepage": "https://github.com/mkernsNCR/So-Much-To-Do#readme"
 }
