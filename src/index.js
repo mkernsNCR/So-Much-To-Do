@@ -1,8 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { CssBaseline, MuiThemeProvider } from '@material-ui/core';
 
-const title = 'My Minimal React Webpack Babel Setup'
+import AppComponent from '@src/app';
+import Theme from '@src/config/theme';
 
-ReactDOM.render(<div>{title}</div>, document.getElementById('app'))
+const rootEl = document.getElementById('app');
 
-module.hot.accept()
+const render = Component =>
+	ReactDOM.render(
+		<MuiThemeProvider theme={Theme}>
+			<CssBaseline />
+			<Component />
+		</MuiThemeProvider>,
+		rootEl
+	);
+
+render(AppComponent);
+
+module.hot.accept();
